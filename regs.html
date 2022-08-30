@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="vish.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+
+    <script>
+        function validateform() {
+            var name = document.myform.name.value;
+            var password = document.myform.password.value;
+            var mobileno = document.myform.mobileno.value;
+            if (name == null || name == "") {
+                alert("Name can't be blank");
+                return false;
+            } else if (password.length < 6) {
+                alert("Password must be at least 6 characters long.");
+                return false;
+            } else if (mobileno.length < 10) {
+                alert("mobileno must be at least 10 characters long");
+                return false;
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 offset-md-4 form login-form">
+                <form name="myform" action="login.html" method="POST" autocomplete="" onsubmit="return validateform()">
+                    <h2 class="text-center">Registration Form</h2>
+
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="name" placeholder="Name">
+                    </div>
+
+                    <div class="form-group">
+                        <input class="form-control" type="email" name="email" placeholder="Email Address">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="number" name="mobileno" placeholder="Mobile no.">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="password" name="password" placeholder="Password" required>
+                    </div>
+
+
+
+
+                    <div class="form-group">
+                        <input class="form-control button" type="submit" name="login" value="Login">
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
